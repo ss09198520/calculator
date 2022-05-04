@@ -9,6 +9,8 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+pr: none #will disable PR Build
+
 steps:
 - task: NodeTool@0
   inputs:
