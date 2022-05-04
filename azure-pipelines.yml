@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeToolCheck@0
+- task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'NodeToolCheck Node.js'
@@ -19,7 +19,7 @@ steps:
     npm -v
   displayName: 'npm NodeToolCheck'
   
-- task: NodeIntall@1
+- task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
@@ -28,7 +28,7 @@ steps:
     npm install
   displayName: 'npm install '
 
-- task: NodeBuild@2
+- task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Build Node.js'
