@@ -36,3 +36,12 @@ steps:
 - script: |
     npm run build
   displayName: 'npm install '
+  
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Test Case'
+
+- script: |
+    npm test
+  displayName: 'npm test '
